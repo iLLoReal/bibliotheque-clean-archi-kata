@@ -11,7 +11,7 @@ export class AjouterLivre {
     auteur: string,
     titre: string,
     ageRequis: number,
-    prixALaJournee: number): Livre | PrixInvalide {
+    prixALaJournee: number): Livre | PrixInvalide | LivreExistant {
 
     if (this.maBibliotheque.contientUnExemplaireDe(titre))
       return new LivreExistant();
